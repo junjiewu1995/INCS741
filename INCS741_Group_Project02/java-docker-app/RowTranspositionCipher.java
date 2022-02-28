@@ -92,9 +92,9 @@ public class RowTranspositionCipher {
 		int x = 0;
 		for (char c : keyArray) {
 			keyPosition[x++] = key.indexOf(c);
-			System.out.print(key.indexOf(c));
+			//System.out.print(key.indexOf(c));
 		}
-		System.out.println();
+		//System.out.println();
 
 		/* Find the rows length */
 		int cols= keylen, rows = 0;
@@ -112,12 +112,12 @@ public class RowTranspositionCipher {
 			{
 				if (k == message.length()) break;
 				plainTextArray[i][j] = messageArray[k++];
-				System.out.print(plainTextArray[i][j]);
+				//System.out.print(plainTextArray[i][j]);
 			}
-			System.out.println();
+			//System.out.println();
 		}
 
-		System.out.println("==============");
+		//System.out.println("==============");
 
 		/* Append the encrypted message line by line through matrix */
 		StringBuilder str = new StringBuilder();
@@ -128,10 +128,10 @@ public class RowTranspositionCipher {
 				if (plainTextArray[i][keyPosition[j]] != 'X')
 				{
 					str.append(plainTextArray[i][keyPosition[j]]);
-					System.out.print(plainTextArray[i][keyPosition[j]]);
+					//System.out.print(plainTextArray[i][keyPosition[j]]);
 				}
 			}
-			System.out.println();
+			//System.out.println();
 		}
 		return str.toString();
 	}
@@ -147,14 +147,14 @@ public class RowTranspositionCipher {
 		enmessage = enmessage.replaceAll("\\s+", ""); 
 		demessage = demessage.replaceAll("\\s+", ""); 
 
-		System.out.println("Test 1 ======================================> "); 
-		System.out.println("M : [ " + enmessage + " ]"); 
-		System.out.println("w : [ " + key + " ]"); 
-		String res = rtcencrytion(key, enmessage); 
-		System.out.println("C : [ " + res + " ]"); 		
-		String decode = rtcdecryption(key, res).trim(); 
-		System.out.println("D : [ " + decode + " ]"); 
-		System.out.println("Comparing M and D : " + enmessage.equals(decode) + "\n"); 
+		// System.out.println("Test 1 ======================================> "); 
+		// System.out.println("M : [ " + enmessage + " ]"); 
+		// System.out.println("w : [ " + key + " ]"); 
+		// String res = rtcencrytion(key, enmessage); 
+		// System.out.println("C : [ " + res + " ]"); 		
+		// String decode = rtcdecryption(key, res).trim(); 
+		// System.out.println("D : [ " + decode + " ]"); 
+		// System.out.println("Comparing M and D : " + enmessage.equals(decode) + "\n"); 
 
 		System.out.println("Test 2 ======================================> "); 
 		System.out.println("C : [ " + demessage + " ]"); 
