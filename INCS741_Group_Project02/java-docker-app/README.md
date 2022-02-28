@@ -32,8 +32,8 @@ java RowTranspositionCipher
 ## Input and Output
 
 Input a and b:
-![jupyter](https://github.com/XinyanZhang027/ML/raw/main/input1.PNG)
+![jupyter](https://github.com/junjiewu1995/INCS741/blob/main/INCS741_Group_Project02/Graphs/Figure1.6.png)
 
 Output:
-![jupyter](https://github.com/XinyanZhang027/ML/raw/main/output1.PNG)
+![jupyter](https://github.com/junjiewu1995/INCS741/blob/main/INCS741_Group_Project02/Graphs/Figure2.0.png)
 
