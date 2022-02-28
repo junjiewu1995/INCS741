@@ -197,64 +197,87 @@ The reorder sequence is 20341 to decryption by using the same row exchange metho
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.39]{./Graphs/Figure1.8.png}
-  \caption{Task2-Decrypted Row Transposition Matrix \\}
+  \caption{Task2-Decrypted Row Transposition Matrix }
   \label{fig:testfig1}
 \end{figure}
 
-\vspace*{-0.15cm}
-The following is the pseudocode for the row transposition cipher algorithm. The first part finds the decoding sequence. Then, write the encrypted message in a 2D matrix. The last step, we rearrange the columns and produce the plaintxt. 
+\vspace*{0.90cm}
+The first part finds the decoding sequence from the key 'NYITV'. Then, write the encrypted message into a 2D matrix 'plainTextArray'. Next, use the RowTranspositionMatrix to record the rearrangement of the 'plainTextArray'. The last step, utilize the stringbuilder to build the encrpted message line by line through the RowTranspositionMatrix.The following is the pseudocode for the row transposition cipher algorithm : \\
 
-\floatname{algorithm} {Row Transposition Decryption Algorithm}
-\renewcommand{\algorithmicrequire}{\textbf{input:}}
+
+\floatname {algorithm} {\footnotesize Row Transposition Decryption Algorithm}
+\renewcommand {\algorithmicrequire}{\textbf{input:}}
 \renewcommand{\algorithmicensure}{\textbf{output:}}
 \begin{algorithm}
   \caption{}\label{}
   \begin{algorithmic}[1]
+  	\footnotesize
     \Require 'w' : Key and 'C' Encrypted plain-text
     \Ensure Decrypted plain-text
     \Function{rtcdecryption}{$w,C$}
-      \State $keylen \gets w.length()$
+      \State  $keylen \gets w.length()$
       \State $keyArray \gets key.toCharArray() $
       \State $messageArray \gets C.toCharArray() $
       \State $keyPos \gets int [keylen]$
+      \State \footnotesize$ $
 	  \State $Array.sort(keyArray)$
 	  \State $String s \gets String.valueOf(keyArray)$	  
-
-      \For{\texttt{<some condition>}}
+	  \State $keyPos \gets int [keylen]$
+	  \State \footnotesize$ $
+      \For{\texttt{each char c in dArray}}
         \State $keyPosition[x] \gets s.indexOf(c)$
-        \State $Increament x by 1$	
+        \State $Increament \hspace{0.1cm} x \hspace{0.1cm} by \hspace{0.1cm}1$	
       \EndFor
-      
-      \State $plainTextArray \gets char[rows][cols]$
-      
+     
+      \State \footnotesize$ $
       \State $cols \gets keylen$
       \State $rows \gets 0$
-      
-	  \If{$C's \hspace{0.1cm}length \hspace{0.1cm} mod \hspace{0.1cm} cols \hspace{0.1cm} equals \hspace{0.1cm} 0$}
-        \State $rows \gets C.length() / cols$
-      \Else
-        \State $rows \gets C.length() / cols + 1$
+	  \If{$C's \hspace{0.1cm}length \hspace{0.1cm} mod \hspace{0.1cm} cols \hspace{0.1cm} equals \hspace{0.1cm} 0$} \Comment \tiny{calculate rows}
+        \State\footnotesize $rows \gets C.length() / cols$
+      \Else \Comment \tiny{calculate columns}
+        \State \footnotesize$rows \gets C.length() / cols + 1$
      \EndIf
+     
+      \State \footnotesize$ $
+      \State $plainTextArray \gets char[rows][cols]$
+       
  
-	  
 	  \State $k \gets 0$
-	  \For{\texttt{<some condition>}}
-	  	\For{\texttt{<some condition>}}
-        	\State \texttt{<do stuff>}
-        \EndFor  
-      \EndFor     
-      
-      \State $ StringBuilder str \gets StringBuilder()$
-      \For{\texttt{i to rows}}
+	  \For{\texttt{i to rows}}
 	  	\For{\texttt{j to cols}}
-        	\State \texttt{<do stuff>}
+        	\If{$count \hspace{0.1cm}k\hspace{0.1cm} equals\hspace{0.1cm} message \hspace{0.1cm} C's \hspace{0.1cm}length$}
+        	   \State $while \hspace{0.1cm} k \hspace{0.1cm} equals \hspace{0.1cm} message's \hspace{0.1cm} length \hspace{0.1cm} and \hspace{0.1cm} j \hspace{0.1cm} less \hspace{0.1cm} than \hspace{0.1cm} cols \hspace{0.1cm} keep \hspace{0.1cm} $
+        	   \State $add \hspace{0.1cm}'X' \hspace{0.1cm} to \hspace{0.1cm} plainTextArray[i][j]$
+        	   \State $break$
+        	   \State \tiny$plainTextArray[i][j] \gets messageArray[k]$
+        	   \State \footnotesize $Increament\hspace{0.1cm} k\hspace{0.1cm} by \hspace{0.1cm}1$	
+        	   \State \footnotesize$ $
+		    \EndIf
+        \EndFor  
+      \EndFor  
+         
+      \State  $rowTranspositionMatrix \gets char[rows][cols] $
+      \For{\texttt{i to rows}}
+	  	\For{\texttt{j to cols}} \Comment \tiny{each column read by the key order}
+	  		\State \tiny$RowTranspositionMatrix[i][j]  \gets plainTextArray[i][keyPosition[j]]$  
         \EndFor  
       \EndFor    
       
-      \State \textbf{return} $b$\Comment{The message is str}
+      \State \footnotesize$ $
+      
+      \State \footnotesize $ StringBuilder\hspace{0.1cm} str \gets StringBuilder()$
+      \For{\texttt{i to rows}}
+	  	\For{\texttt{j to cols}}
+        	\State $str.append(RowTranspositionMatrix[i][j])$   	
+        \EndFor  
+      \EndFor  
+      
+      \State \textbf{return} $str$\Comment \tiny{Decrypted message is str}
     \EndFunction
   \end{algorithmic}
 \end{algorithm}
+
+
 
 
 \begin{figure}[H]
@@ -278,7 +301,7 @@ With the growing use of computers and the Internet, and an increasing need to tr
 
 In this example, we can see that using only one round of encryption and a minor key (5 letters), the information is already quite challenging to decipher, and with the use of the protocols mentioned above that repeatedly use the types of transposition, it becomes almost impossible to decipher the messages.
 
-We also demonstrate in the project that the information is decrypted, just doing the inverse of the encryption procedure that needs to be done by the person who will receive the message. \\ \\ \\
+We also demonstrate in the project that the information is decrypted, just doing the inverse of the encryption procedure that needs to be done by the person who will receive the message. \\ 
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST

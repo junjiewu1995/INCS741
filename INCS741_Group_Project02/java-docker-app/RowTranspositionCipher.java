@@ -36,7 +36,6 @@ public class RowTranspositionCipher {
 		if (message.length() % cols == 0) rows = message.length() / cols;
 		else rows = message.length() / cols + 1;
 
-		System.out.println("row : " + rows + " cols : " + cols);
 		/* Message to CharArray */
 		plainTextArray = new char[rows][cols]; 
 		RowTranspositionMatrix = new char[rows][cols]; 
@@ -57,22 +56,22 @@ public class RowTranspositionCipher {
 			// System.out.println();
 		} 
 
-		/* Append the encrypted message line by line through matrix */
-		StringBuilder str = new StringBuilder(); 
+		/* Create the row transposition matrix */
 		for (int i = 0; i < rows; i ++) {
 			for (int j = 0; j < cols; j ++) {
-				str.append(plainTextArray[i][keyPosition[j]]);  
 				RowTranspositionMatrix[i][j] = plainTextArray[i][keyPosition[j]];
 			} 
 		}
 
-		// System.out.println("RowTranspositionMatrix ...");
-		// for (int i = 0; i < rows; i ++) {
-		// 	for (int j = 0; j < cols; j ++) {
-		// 		System.out.print(RowTranspositionMatrix[i][j]);
-		// 	} 
-		// 	System.out.println();
-		// }
+		/* Append the encrypted message line by line through matrix */
+		StringBuilder str = new StringBuilder(); 
+		for (int i = 0; i < rows; i ++) {
+			for (int j = 0; j < cols; j ++) {
+				str.append(RowTranspositionMatrix[i][j]); 
+				// System.out.print(RowTranspositionMatrix[i][j]);
+			} 
+			// System.out.println();
+		}
 
 		return str.toString(); 
 	} 
@@ -106,10 +105,8 @@ public class RowTranspositionCipher {
 
 		/* Message to CharArray */
 		int k = 0;
-		for (int i = 0; i < rows; ++ i) 
-		{
-			for (int j = 0; j < cols; ++ j) 
-			{
+		for (int i = 0; i < rows; ++ i) {
+			for (int j = 0; j < cols; ++ j) {
 				if (k == message.length()) break;
 				plainTextArray[i][j] = messageArray[k++];
 				//System.out.print(plainTextArray[i][j]);
@@ -117,14 +114,10 @@ public class RowTranspositionCipher {
 			//System.out.println();
 		}
 
-		//System.out.println("==============");
-
 		/* Append the encrypted message line by line through matrix */
 		StringBuilder str = new StringBuilder();
-		for (int i = 0; i < rows; i ++) 
-		{
-			for (int j = 0; j < cols; j ++) 
-			{
+		for (int i = 0; i < rows; i ++) {
+			for (int j = 0; j < cols; j ++) {
 				if (plainTextArray[i][keyPosition[j]] != 'X')
 				{
 					str.append(plainTextArray[i][keyPosition[j]]);
@@ -147,14 +140,14 @@ public class RowTranspositionCipher {
 		enmessage = enmessage.replaceAll("\\s+", ""); 
 		demessage = demessage.replaceAll("\\s+", ""); 
 
-		// System.out.println("Test 1 ======================================> "); 
-		// System.out.println("M : [ " + enmessage + " ]"); 
-		// System.out.println("w : [ " + key + " ]"); 
-		// String res = rtcencrytion(key, enmessage); 
-		// System.out.println("C : [ " + res + " ]"); 		
-		// String decode = rtcdecryption(key, res).trim(); 
-		// System.out.println("D : [ " + decode + " ]"); 
-		// System.out.println("Comparing M and D : " + enmessage.equals(decode) + "\n"); 
+		System.out.println("Test 1 ======================================> "); 
+		System.out.println("M : [ " + enmessage + " ]"); 
+		System.out.println("w : [ " + key + " ]"); 
+		String res = rtcencrytion(key, enmessage); 
+		System.out.println("C : [ " + res + " ]"); 		
+		String decode = rtcdecryption(key, res).trim(); 
+		System.out.println("D : [ " + decode + " ]"); 
+		System.out.println("Comparing M and D : " + enmessage.equals(decode) + "\n"); 
 
 		System.out.println("Test 2 ======================================> "); 
 		System.out.println("C : [ " + demessage + " ]"); 
