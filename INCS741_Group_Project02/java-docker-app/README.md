@@ -31,9 +31,9 @@ java RowTranspositionCipher
 
 ## Input and Output
 
-Input a and b:
+Task1 encrypt the message
 ![jupyter](https://github.com/junjiewu1995/INCS741/blob/main/INCS741_Group_Project02/Graphs/Figure1.6.png)
 
-Output:
+Task2 decrypt the message
 ![jupyter](https://github.com/junjiewu1995/INCS741/blob/main/INCS741_Group_Project02/Graphs/Figure2.0.png)
 
