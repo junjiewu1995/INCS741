@@ -215,12 +215,12 @@ The first part finds the decoding sequence from the key 'NYITV'. Then, write the
     \Require 'w' : Key and 'C' Encrypted plain-text
     \Ensure Decrypted plain-text
     \Function{rtcdecryption}{$w,C$}
-      \State  $keylen \gets w.length()$
+      \State $keylen \gets w.length()$
       \State $keyArray \gets key.toCharArray() $
       \State $messageArray \gets C.toCharArray() $
       \State $keyPos \gets int [keylen]$
       \State \footnotesize$ $
-	  \State $Array.sort(keyArray)$
+	  \State $Sort\hspace{0.1cm} the \hspace{0.1cm}keyArray$
 	  \State $String s \gets String.valueOf(keyArray)$	  
 	  \State $keyPos \gets int [keylen]$
 	  \State \footnotesize$ $
@@ -249,7 +249,7 @@ The first part finds the decoding sequence from the key 'NYITV'. Then, write the
         	   \State $while \hspace{0.1cm} k \hspace{0.1cm} equals \hspace{0.1cm} message's \hspace{0.1cm} length \hspace{0.1cm} and \hspace{0.1cm} j \hspace{0.1cm} less \hspace{0.1cm} than \hspace{0.1cm} cols \hspace{0.1cm} keep \hspace{0.1cm} $
         	   \State $add \hspace{0.1cm}'X' \hspace{0.1cm} to \hspace{0.1cm} plainTextArray[i][j]$
         	   \State $break$
-        	   \State \tiny$plainTextArray[i][j] \gets messageArray[k]$
+        	   \State $assign \hspace{0.1cm}  plainTextArray[i][j] \hspace{0.1cm}  from \hspace{0.1cm} messageArray[k]$
         	   \State \footnotesize $Increament\hspace{0.1cm} k\hspace{0.1cm} by \hspace{0.1cm}1$	
         	   \State \footnotesize$ $
 		    \EndIf
@@ -259,7 +259,8 @@ The first part finds the decoding sequence from the key 'NYITV'. Then, write the
       \State  $rowTranspositionMatrix \gets char[rows][cols] $
       \For{\texttt{i to rows}}
 	  	\For{\texttt{j to cols}} \Comment \tiny{each column read by the key order}
-	  		\State \tiny$RowTranspositionMatrix[i][j]  \gets plainTextArray[i][keyPosition[j]]$  
+	  		\State \footnotesize$assign \hspace{0.1cm} RowTranspositionMatrix[i][j]  \hspace{0.1cm}  $ 
+	  		\State $from \hspace{0.1cm} plainTextArray[i][keyPosition[j]]$ 
         \EndFor  
       \EndFor    
       
