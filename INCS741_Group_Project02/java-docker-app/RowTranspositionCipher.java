@@ -109,7 +109,7 @@ public class RowTranspositionCipher {
 			for (int j = 0; j < cols; ++ j) {
 				if (k == message.length()) break;
 				plainTextArray[i][j] = messageArray[k++];
-				//System.out.print(plainTextArray[i][j]);
+				//System.out.print(plainTextArray[i][j] + " ");
 			}
 			//System.out.println();
 		}
@@ -130,9 +130,22 @@ public class RowTranspositionCipher {
 	}
 
 	public static void main (String [] args) {
+
+		/**
+		 * 
+		 * @ Hard code input for the assignment
+		 **/
 		String key = "NYITV"; 
 		String enmessage = "CRYPTOLOGY IS THE PRACTICE AND STUDY OF TECHNIQUES FOR SECURE COMMUNICATION IN THE PRESENCE OF THIRD PARTIES CALLED ADVERSARIES"; 
 		String demessage = "eroohalpsmeptroohalsefxphtnlefhhxtwstiiiieoecrastitosplmgeasentmitrasnefylypnhiasnetoiroitaetaxoeetonicrasetltesnicrfwmurnhrrhitrcrxhtpipsrmaimiitpiphlaleiucciptotpe"; 
+
+		/**
+		 * @Read the input from stdin
+		 * Scanner sc = new Scanner(System.in);
+		 * String key = sc.readline().trim();
+		 * String enmessage = sc.readline().trim().toLowerCase();
+		 * String demessage = sc.readline().trim().toLowerCase();
+		 */
 
 		key	= key.replaceAll("\\s+", ""); 
 		enmessage = enmessage.toLowerCase();

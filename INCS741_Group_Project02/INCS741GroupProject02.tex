@@ -79,7 +79,7 @@
 %----------------------------------------------------------------------------------------
 
 \setlength{\droptitle}{-4\baselineskip} % Move the title up
-\setlength{\textfloatsep}{4pt}
+\setlength{\textfloatsep}{1.5pt}
 
 \pretitle{\begin{center}\Huge\bfseries} % Article title formatting
 \posttitle{\end{center}} % Article title closing formatting
@@ -218,11 +218,10 @@ The first part finds the decoding sequence from the key 'NYITV'. Then, write the
       \State $keylen \gets w.length()$
       \State $keyArray \gets key.toCharArray() $
       \State $messageArray \gets C.toCharArray() $
-      \State $keyPos \gets int [keylen]$
+      \State $keyPosition \gets int [keylen]$
       \State \footnotesize$ $
 	  \State $Sort\hspace{0.1cm} the \hspace{0.1cm}keyArray$
 	  \State $String s \gets String.valueOf(keyArray)$	  
-	  \State $keyPos \gets int [keylen]$
 	  \State \footnotesize$ $
       \For{\texttt{each char c in dArray}}
         \State $keyPosition[x] \gets s.indexOf(c)$
@@ -307,8 +306,14 @@ We also demonstrate in the project that the information is decrypted, just doing
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
 %----------------------------------------------------------------------------------------
+\vspace*{20.0cm}
 \begin{thebibliography}{} % Bibliography - this is intentionally simple in this template
-\footnotesize[1]G. Newell, “An introduction to linux access control lists (acls),” Enable Sysadmin, 07-Jan-2022. [Online]. Available: https://www.redhat.com/sysadmin/linux-access-control-lists. [Accessed: 21-Feb-2022]. \\ \\
+
+\footnotesize[1]N. Hamza, “Row transposition ciphers - ppt download,” SlidePlayer. [Online]. Available: https://slideplayer.com/slide/13205094/. [Accessed: 28-Feb-2022].  \\ \\
+
+\footnotesize[2]“Transposition cipher,” Wikipedia, 23-Feb-2022. [Online]. Available: https\:// en.wikipedia.org/wiki/Transposition\_cipher. [Accessed\: 28-Feb-2022]. \\ \\
+
+
  
 \end{thebibliography}
 
