@@ -119,7 +119,7 @@ The cipher appeared thousands of years ago but was heavily exploited from the 2n
 
 \section{Introduction}
 
-\lettrine[nindent=2em,lines=1] {T}he transposition cipher means that we change the order of the plan-text and re-arrange to get ciphertext. Row transportation cipher is the plan-text that is written in rows of fixed length, and we write by column in key order. To enhance the complexity we can follow the procedure to get a more complex cipher-text.
+\lettrine[nindent=2em,lines=1] {T}he cipher appeared thousands of years ago but was heavily exploited from the 2nd World War in which information exchanged between enemies, even encrypted, was intercepted and deciphered. There are two widely explored types of encryptions (transposition and substitution) that, when worked independently, can be solved quickly. Still, protocols have been created and improved that fundamentally use these two techniques repetitively. By definition, transposition cypher changes the plaintext order and rearranges to get ciphertext. In this group project, we used “Row Transposition Cipher,” where you write your plaintext in rows of fixed length (key size), and we write by columns in key order. We can use the procedure to enhance the complexity of a more complex cipher-text.
 
 
 \section{Encryption Implementation}
@@ -174,15 +174,12 @@ The following figure 4 displays the encrypted message.
   \label{fig:testfig1}
 \end{figure}
 
-Figure 5 shows the result of the encrypted plaintext. Further, we use the decrytion algorithm to double check the answer. The result match to the original text.\\ \\ 
+Figure 5 shows the result of the encrypted plaintext. Further, we use the decrytion algorithm to double check the answer. The result match to the original text.\\ 
 
-
+\vspace*{-3.0cm}
 \section{Decryption Implementation}
 
 The decryption algorithm is the reverse order of the encryption algorithm. The algorithm first writes the encrypted message out in rows. Then, it reads off the message by recording columns. \\
-
-
-
 
 \begin{figure}[H]
   \centering
@@ -190,9 +187,6 @@ The decryption algorithm is the reverse order of the encryption algorithm. The a
   \caption{Task2-Decrypted Row Transposition Matrix \\}
   \label{fig:testfig1}
 \end{figure}
-
-\vspace*{0.0cm}
-The first part finds the decoding sequence from the key 'NYITV'. Then, write the encrypted message into a 2D matrix 'plainTextArray'. Next, use the RowTranspositionMatrix to record the rearrangement of the 'plainTextArray'. The last step, utilize the stringbuilder to build the encrpted message line by line through the RowTranspositionMatrix.The following is the pseudocode for the row transposition cipher algorithm : \\
 
 
 \begin{figure}[H]
@@ -202,6 +196,12 @@ The first part finds the decoding sequence from the key 'NYITV'. Then, write the
   \label{fig:testfig1}
 \end{figure}
 
+The above is the declassified information. \\
+
+
+The first part finds the decoding sequence from the key 'NYITV'. Then, write the encrypted message into a 2D matrix 'plainTextArray'. Next, use the RowTranspositionMatrix to record the rearrangement of the 'plainTextArray'. The last step, utilize the stringbuilder to build the encrpted message line by line through the RowTranspositionMatrix.The following is the pseudocode for the row transposition cipher algorithm : \\ \\ \\ \\
+
+\vspace*{-1.5cm}
 
 \floatname {algorithm} {\footnotesize Row Transposition Decryption Algorithm}
 \renewcommand {\algorithmicrequire}{\textbf{input:}}
@@ -270,6 +270,7 @@ The first part finds the decoding sequence from the key 'NYITV'. Then, write the
   \end{algorithmic}
 \end{algorithm}
 
+The following figure 10 shows the result of the decrypted plaintext. Further, we use the encrytion algorithm to double check the answer. The result match to the original encrypted text.
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.36]{./Graphs/Figure2.0.png}
@@ -277,7 +278,7 @@ The first part finds the decoding sequence from the key 'NYITV'. Then, write the
   \label{fig:testfig1}
 \end{figure}
 
-Figure 10 shows the result of the decrypted plaintext. Further, we use the encrytion algorithm to double check the answer. The result match to the original encrypted text.
+
 
 
 \section{Conclusion}
@@ -291,7 +292,7 @@ We also demonstrate in the project that the information is decrypted, just doing
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
 %----------------------------------------------------------------------------------------
-\vspace*{2.5cm}
+\vspace*{1.5cm}
 \begin{thebibliography}{} % Bibliography - this is intentionally simple in this template
 
 \footnotesize[1]N. Hamza, “Row transposition ciphers - ppt download,” SlidePlayer. [Online]. Available: https://slideplayer.com/slide/13205094/. [Accessed: 28-Feb-2022].  \\ \\
