@@ -136,10 +136,10 @@ Take the key 'NYITV' as an example (Figure 1), the algorithm uses the 26 English
   \label{fig:testfig1}
 \end{figure}
 
-The reorder sequence is '20341'(Figure1) for decryption in the columns of 2D Matrix, which transfers from the key order '14023'. For instance, the 0 column read 1st and it is in the RowMatrix column 2. In Figure 2, we read columns in reordering sequence '20341' in the matrix.
+The sequence reordering is '20341'(Figure1) for decryption in reading the columns of 2D Matrix, which transfers from the key order '14023'. For instance, the 0 column read 1st and it is in the RowTranspositionMatrix column 2. In Figure 2, we read columns by following the reordering sequence '20341' in the matrix to get the encryption message.
 
 
-Regards for the current assignment, the empty space would be replaced by the capital letter 'X'.  Append the rows to form the ciphertext.\\
+Regards for the current assignment, the empty space would be replaced by the capital letter 'X' to append the rows to form the ciphertext.\\
 
 \begin{figure}[H]
   \centering
@@ -167,12 +167,12 @@ The following figure 3 displays the encrypted message.
   \label{fig:testfig1}
 \end{figure}
 
-Figure 5 shows the result of the encrypted plaintext. Further, we use the decrytion algorithm to double check the answer. The result match to the original text.\\ 
+The Figure 4 shows the result of the encrypted message. Further, we use the decrytion algorithm to double check the answer. The result matches to the original text.\\ 
 
 \vspace*{-0.10cm}
 \section{Decryption Implementation}
 
-The decryption algorithm put the letters in columns by the key order '14023'; however, as we fill the columns in the order '20341'. Take '0' as an example, the '0' is filled up 1st in the 2nd column. The algorithm first writes the encrypted message out in columns. Then, it reads off the message by '01234' row by row. \\
+The decryption algorithm put the letters in columns by the key order '14023'; however, as we fill the columns by following the order of '20341'(Figure 5, left). Take '0' as an example, the '0' is filled up 1st in the RowMatrix's 2nd column. Then, it reads off the message by '01234' row by row(Figure 5, right). \\
 
 \begin{figure}[H]
   \centering
@@ -205,6 +205,7 @@ The following is the pseudocode for the row transposition cipher algorithm : \\
     \Require 'w' : Key and 'C' Encrypted plain-text
     \Ensure Decrypted plain-text
     \Function{rtcdecryption}{$w,C$}
+      \State \footnotesize$ $
       \State $keylen \gets w.length()$
       \State $keyArray \gets key.toCharArray() $
       \State $messageArray \gets C.toCharArray() $
@@ -213,17 +214,18 @@ The following is the pseudocode for the row transposition cipher algorithm : \\
 	  \State $Sort\hspace{0.1cm} the \hspace{0.1cm}keyArray$  \Comment \tiny{sort the keyArray and assign it to a string}
 	  \State\footnotesize $String s \gets String.valueOf(keyArray)$	  
 	  \State \footnotesize$ $
-	  \State $x \gets 0$
-      \For{\texttt{each char c in dArray}}
-        \State $keyPosition[x] \gets s.indexOf(c)$
+	  \State $x \gets 0$ 
+      \For{\texttt {each char c in dArray}} 
+        \State  $keyPosition[x] \gets s.indexOf(c)$
         \State $Increament \hspace{0.1cm} x \hspace{0.1cm} by \hspace{0.1cm}1$	
       \EndFor
-     
-      \State $cols \gets keylen$
+      \State \footnotesize$ $
+      
+      \State $cols \gets keylen$ 
       \State $rows \gets 0$
 	  \If{$C's \hspace{0.1cm}length \hspace{0.1cm} mod \hspace{0.1cm} cols \hspace{0.1cm} equals \hspace{0.1cm} 0$} \Comment \tiny{calculate rows}
         \State\footnotesize $rows \gets C.length() / cols$
-      \Else \Comment \tiny{calculate columns}
+      \Else \Comment \tiny{Get the right order to decrypt the message in the matrix} \footnotesize
         \State \footnotesize$rows \gets C.length() / cols + 1$
      \EndIf
      
@@ -263,7 +265,7 @@ The following is the pseudocode for the row transposition cipher algorithm : \\
 \end{algorithm}
 
 
-The following figure 7 shows the result of the decrypted plaintext. Further, use the encryption algorithm to double-check the answer. The result matches the original encrypted text.
+The following figure 7 shows the result of the decrypted plaintext. Further, we use the encryption algorithm to double-check the answer. The result matches the original encrypted message.
 
 \begin{figure}[H]
   \centering

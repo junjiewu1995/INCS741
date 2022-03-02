@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.12)  2 MAR 2022 08:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.12)  2 MAR 2022 09:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -665,11 +665,6 @@ File: ./Graphs/Figure1.1.png Graphic file (type png)
 Package pdftex.def Info: ./Graphs/Figure1.1.png  used on input line 134.
 (pdftex.def)             Requested size: 155.98395pt x 45.47021pt.
 
-Underfull \hbox (badness 1127) in paragraph at lines 142--143
-\T1/pplx/m/n/10 (+20) let-ter 'X'. Ap-pend the rows to form the
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
@@ -696,6 +691,16 @@ Package pdftex.def Info: ./Graphs/Figure1.6.png  used on input line 165.
 
 Overfull \hbox (0.51859pt too wide) in paragraph at lines 165--166
  [][] 
+ []
+
+
+Underfull \hbox (badness 1755) in paragraph at lines 170--171
+[]\T1/pplx/m/n/10 (+20) The Fig-ure 4 shows the re-sult of the
+ []
+
+
+Underfull \hbox (badness 1708) in paragraph at lines 170--171
+\T1/pplx/m/n/10 (+20) de-cry-tion al-go-rithm to dou-ble check the
  []
 
 
@@ -749,7 +754,7 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplx/m/sc/8'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
-17.
+18.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -759,7 +764,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (6.23132pt too wide) in paragraph at lines 243--244
+Overfull \hbox (6.23132pt too wide) in paragraph at lines 245--246
 [] $\OML/zplm/m/it/8 assign RowMatrix\OT1/zplm/m/n/8 [\OML/zplm/m/it/8 j\OT1/zp
 lm/m/n/8 ][\OML/zplm/m/it/8 keyPosition\OT1/zplm/m/n/8 [\OML/zplm/m/it/8 i\OT1/
 zplm/m/n/8 ]] \OML/zplm/m/it/8 from$ 
@@ -768,97 +773,94 @@ zplm/m/n/8 ]] \OML/zplm/m/it/8 from$
 <./Graphs/Figure2.0.png, id=53, 586.19pt x 276.03125pt>
 File: ./Graphs/Figure2.0.png Graphic file (type png)
 <use ./Graphs/Figure2.0.png>
-Package pdftex.def Info: ./Graphs/Figure2.0.png  used on input line 270.
+Package pdftex.def Info: ./Graphs/Figure2.0.png  used on input line 272.
 (pdftex.def)             Requested size: 205.16957pt x 96.61238pt.
 
-Underfull \hbox (badness 1221) in paragraph at lines 280--284
+Underfull \hbox (badness 1221) in paragraph at lines 282--286
 \T1/pplx/m/n/10 (+20) (row trans-porta-tion) and a mi-nor key (5
  []
 
 
-Underfull \hbox (badness 1859) in paragraph at lines 280--284
+Underfull \hbox (badness 1859) in paragraph at lines 282--286
 \T1/pplx/m/n/10 (+20) let-ters), the in-for-ma-tion is al-ready quite
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--284
+Underfull \hbox (badness 10000) in paragraph at lines 282--286
 
  []
 
 
-LaTeX Warning: Empty `thebibliography' environment on input line 297.
+LaTeX Warning: Empty `thebibliography' environment on input line 299.
 
 
-Underfull \hbox (badness 1845) in paragraph at lines 291--297
+Underfull \hbox (badness 1845) in paragraph at lines 293--299
 \T1/pplx/m/n/8 (+20) [1]N. Hamza, ^^PRow trans-po-si-tion ci-phers - ppt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--297
+Underfull \hbox (badness 10000) in paragraph at lines 293--299
 \T1/pplx/m/n/8 (+20) down-load,^^Q Slide-Player. [On-line]. Avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--297
+Underfull \hbox (badness 10000) in paragraph at lines 293--299
 \T1/pplx/m/n/8 (+20) https://slideplayer.com/slide/13205094/. [Ac-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--297
+Underfull \hbox (badness 10000) in paragraph at lines 293--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--297
+Underfull \hbox (badness 10000) in paragraph at lines 293--299
 \T1/pplx/m/n/8 (+20) [2]^^PTransposition ci-pher,^^Q Wikipedia, 23-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--297
+Underfull \hbox (badness 10000) in paragraph at lines 293--299
 \T1/pplx/m/n/8 (+20) Feb-2022. [On-line]. Avail-able: https//
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--297
+Underfull \hbox (badness 10000) in paragraph at lines 293--299
 \T1/pplx/m/n/8 (+20) en.wikipedia.org/wiki/Transposition_cipher. [Ac-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--297
+Underfull \hbox (badness 10000) in paragraph at lines 293--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--297
+Underfull \hbox (badness 10000) in paragraph at lines 293--299
 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3 <./Graphs/Figure2.0.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 302.
+[3 <./Graphs/Figure2.0.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 304.
  [4
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 302.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 304.
  (./INCS741GroupProject02.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 302.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 302.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 304.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 304.
 Package rerunfilecheck Info: File `INCS741GroupProject02.out' has not changed.
 (rerunfilecheck)             Checksum: 8104AE5FE7CB7419D68801CF79136153;212.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 302.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 304.
  ) 
 Here is how much of TeX's memory you used:
- 12054 strings out of 480608
- 186355 string characters out of 5903630
+ 12058 strings out of 480608
+ 186394 string characters out of 5903630
  509590 words of memory out of 5000000
  27496 multiletter control sequences out of 15000+600000
- 602401 words of font info for 227 fonts, out of 8000000 for 9000
+ 602624 words of font info for 230 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,12n,45p,884b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
@@ -871,7 +873,7 @@ xmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2020/texm
 f-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2020/texmf-dist/
 fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/t
 ype1/urw/palatino/uplri8a.pfb>
-Output written on INCS741GroupProject02.pdf (4 pages, 417792 bytes).
+Output written on INCS741GroupProject02.pdf (4 pages, 417922 bytes).
 PDF statistics:
  102 PDF objects out of 1000 (max. 8388607)
  73 compressed objects within 1 object stream
