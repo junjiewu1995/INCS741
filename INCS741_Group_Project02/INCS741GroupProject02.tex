@@ -107,7 +107,7 @@ The cipher appeared thousands of years ago but was heavily exploited from the 2n
 }
 
 %----------------------------------------------------------------------------------------
-\setlength{\intextsep}{10pt plus 1pt minus 2pt}
+\setlength{\intextsep}{9.5pt plus 1pt minus 2pt}
 \begin{document}
 
 % Print the title
@@ -136,7 +136,7 @@ Take the key 'NYITV' as a example (Figure 1), the algorithm uses the 26 English 
   \label{fig:testfig1}
 \end{figure}
 
-The reorder sequence is 20341 to decryption by using the same row exchange method.\\
+The reorder sequence is '20341' for decryption in the columns of 2D Matrix. \\
 
 \begin{figure}[H]
   \centering
@@ -179,7 +179,7 @@ Figure 5 shows the result of the encrypted plaintext. Further, we use the decryt
 \vspace*{-3.0cm}
 \section{Decryption Implementation}
 
-The decryption algorithm is the reverse order of the encryption algorithm. The algorithm first writes the encrypted message out in rows. Then, it reads off the message by recording columns. \\
+The decryption algorithm put the letters in columns by the key order '14023';however, as we fill the columns in the order '20314'. Take '0' as a example, The '0' is filled up 1st in the 2nd column. The algorithm first writes the encrypted message out in rows. Then, it reads off the message by recording columns. \\
 
 \begin{figure}[H]
   \centering
@@ -198,8 +198,7 @@ The decryption algorithm is the reverse order of the encryption algorithm. The a
 
 The above is the declassified information. \\
 
-
-The first part finds the decoding sequence from the key 'NYITV'. Then, write the encrypted message into a 2D matrix 'plainTextArray'. Next, use the RowTranspositionMatrix to record the rearrangement of the 'plainTextArray'. The last step, utilize the stringbuilder to build the encrpted message line by line through the RowTranspositionMatrix.The following is the pseudocode for the row transposition cipher algorithm : \\ \\ \\ \\
+The first part finds the decoding sequence from the key 'NYITV'. Then, write the encrypted message into a 2D RowTranspositionMatrix. Next, use the RowTranspositionMatrix to record the rearrangement of the RowTranspositionMatrix . The last step, utilize the stringbuilder to build the encrpted message line by line through the RowMatrix.The following is the pseudocode for the row transposition cipher algorithm : \\ \\ \\ \\
 
 \vspace*{-1.5cm}
 
@@ -259,7 +258,7 @@ The first part finds the decoding sequence from the key 'NYITV'. Then, write the
       \State \footnotesize $ StringBuilder\hspace{0.1cm} str \gets StringBuilder()$
       \For{\texttt{i to rows}}
 	  	\For{\texttt{j to cols}}
-	  		\If{$RowMatrix[i][j] \hspace{0.1cm} != \hspace{0.1cm} to \hspace{0.1cm} 'X'$} 
+	  		\If{$RowMatrix[i][j] \hspace{0.1cm} unequal \hspace{0.1cm} to \hspace{0.1cm} 'X'$} 
 	  		\State $ str.append(RowMatrix[i][j]) $
 		    \EndIf
         \EndFor  
@@ -271,9 +270,10 @@ The first part finds the decoding sequence from the key 'NYITV'. Then, write the
 \end{algorithm}
 
 The following figure 10 shows the result of the decrypted plaintext. Further, we use the encrytion algorithm to double check the answer. The result match to the original encrypted text.
+
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.36]{./Graphs/Figure2.0.png}
+  \includegraphics[scale=0.35]{./Graphs/Figure2.0.png}
   \caption{Task2-Output}
   \label{fig:testfig1}
 \end{figure}
