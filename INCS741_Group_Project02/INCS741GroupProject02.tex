@@ -136,7 +136,7 @@ Take the key 'NYITV' as an example (Figure 1), the algorithm uses the 26 English
   \label{fig:testfig1}
 \end{figure}
 
-The reorder sequence is '20341' for decryption in the columns of 2D Matrix, which transfers from the key order '14023'. For instance, the 0 column read 1st and it is in the RowMatrix column 2.
+The reorder sequence is '20341'(Figure1) for decryption in the columns of 2D Matrix, which transfers from the key order '14023'. For instance, the 0 column read 1st and it is in the RowMatrix column 2.
 
 
 Regards for the current assignment, the empty space would be replaced by the capital letter 'X'.  Append the rows to form the ciphertext.\\
@@ -149,7 +149,7 @@ Regards for the current assignment, the empty space would be replaced by the cap
 \end{figure}
 
 
-The following figure 4 displays the encrypted message.
+The following figure 3 displays the encrypted message.
 
 \begin{figure}[H]
   \centering
@@ -176,7 +176,7 @@ The decryption algorithm put the letters in columns by the key order '14023'; ho
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.39]{./Graphs/Figure1.8.png}
+  \includegraphics[scale=0.55]{./Graphs/Figure1.8.png}
   \caption{Task2-Decrypted Row Transposition Matrix \\}
   \label{fig:testfig1}
 \end{figure}
@@ -189,9 +189,9 @@ The decryption algorithm put the letters in columns by the key order '14023'; ho
   \label{fig:testfig1}
 \end{figure}
 
-The above is the declassified information. \\
+The following is the pseudocode for the row transposition cipher algorithm : \\ 
+\indent The first part finds the decoding sequence from the key 'NYITV'. Then, write the encrypted message into a 2D RowTranspositionMatrix. Next, use the RowTranspositionMatrix to record the rearrangement of the RowTranspositionMatrix. In the last step, utilize the StringBuilder to build the encrypted message line by line through the RowMatrix.\\ \\ \\ \\ 
 
-The first part finds the decoding sequence from the key 'NYITV'. Then, write the encrypted message into a 2D RowTranspositionMatrix. Next, use the RowTranspositionMatrix to record the rearrangement of the RowTranspositionMatrix. In the last step, utilize the StringBuilder to build the encrypted message line by line through the RowMatrix.The following is the pseudocode for the row transposition cipher algorithm : \\ \\ \\ \\
 
 \vspace*{-1.5cm}
 
@@ -262,7 +262,8 @@ The first part finds the decoding sequence from the key 'NYITV'. Then, write the
   \end{algorithmic}
 \end{algorithm}
 
-The following figure 10 shows the result of the decrypted plaintext. Further, use the encryption algorithm to double-check the answer. The result matches the original encrypted text.
+
+The following figure 7 shows the result of the decrypted plaintext. Further, use the encryption algorithm to double-check the answer. The result matches the original encrypted text.
 
 \begin{figure}[H]
   \centering
@@ -276,11 +277,10 @@ The following figure 10 shows the result of the decrypted plaintext. Further, us
 
 \section{Conclusion}
 
-With the growing use of computers and the internet, and an increasing need to transmit information quickly and securely, the use of encryption through existing protocols (AES, RSA, 3DES, etc.) information security that uses the two types of transposition mentioned (transposition and substitution).
-
-In the project, we can see that using only one round of encryption and a minor key (5 letters), the information is already quite challenging to decipher, and with the use of the protocols mentioned above that repeatedly use the types of transposition, it becomes almost impossible to decipher the messages.
-
-We also demonstrate in the project that the information is decrypted, just doing the inverse of the encryption procedure that needs to be done by the person who will receive the message. \\ 
+With the growing use of computers and the internet, and an increasing need to transmit information quickly and securely, encryption through existing protocols (AES, RSA, 3DES, etc.) became essential. 
+In the project, we can see that using only one round of encryption (row transportation) and a minor key (5 letters), the information is already quite challenging to decipher, and with the use of the protocols mentioned above that repeatedly (using transportation, substitution, and other resources), it becomes harder to decipher the messages. 
+We also demonstrate in the project that the information is decrypted, just doing the inverse of the encryption procedure that needs to be done by the person who will receive the message.
+ \\ 
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
