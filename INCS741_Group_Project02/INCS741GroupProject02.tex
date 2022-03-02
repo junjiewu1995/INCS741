@@ -136,7 +136,7 @@ Take the key 'NYITV' as an example (Figure 1), the algorithm uses the 26 English
   \label{fig:testfig1}
 \end{figure}
 
-The reorder sequence is '20341'(Figure1) for decryption in the columns of 2D Matrix, which transfers from the key order '14023'. For instance, the 0 column read 1st and it is in the RowMatrix column 2.
+The reorder sequence is '20341'(Figure1) for decryption in the columns of 2D Matrix, which transfers from the key order '14023'. For instance, the 0 column read 1st and it is in the RowMatrix column 2. In Figure 2, we read columns in reordering sequence '20341' in the matrix.
 
 
 Regards for the current assignment, the empty space would be replaced by the capital letter 'X'.  Append the rows to form the ciphertext.\\
@@ -172,7 +172,7 @@ Figure 5 shows the result of the encrypted plaintext. Further, we use the decryt
 \vspace*{-0.10cm}
 \section{Decryption Implementation}
 
-The decryption algorithm put the letters in columns by the key order '14023'; however, as we fill the columns in the order '20341'. Take '0' as an example, The '0' is filled up 1st in the 2nd column. The algorithm first writes the encrypted message out in rows. Then, it reads off the message by recording columns. \\
+The decryption algorithm put the letters in columns by the key order '14023'; however, as we fill the columns in the order '20341'. Take '0' as an example, the '0' is filled up 1st in the 2nd column. The algorithm first writes the encrypted message out in columns. Then, it reads off the message by '01234' row by row. \\
 
 \begin{figure}[H]
   \centering
