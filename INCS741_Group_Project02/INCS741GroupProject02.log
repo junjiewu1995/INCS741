@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.12)  2 MAR 2022 09:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.12)  2 MAR 2022 09:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -725,6 +725,11 @@ File: ./Graphs/Figure1.9.png Graphic file (type png)
 Package pdftex.def Info: ./Graphs/Figure1.9.png  used on input line 185.
 (pdftex.def)             Requested size: 182.93298pt x 99.37099pt.
 
+Underfull \hbox (badness 2644) in paragraph at lines 190--192
+\T1/pplx/m/n/10 (+20) from the key 'NY-ITV'. Then, we write
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 190--192
 
  []
@@ -762,96 +767,95 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (6.23132pt too wide) in paragraph at lines 243--244
-[] $\OML/zplm/m/it/8 assign RowMatrix\OT1/zplm/m/n/8 [\OML/zplm/m/it/8 j\OT1/zp
-lm/m/n/8 ][\OML/zplm/m/it/8 keyPosition\OT1/zplm/m/n/8 [\OML/zplm/m/it/8 i\OT1/
-zplm/m/n/8 ]] \OML/zplm/m/it/8 from$ 
- []
+Underfull \vbox (badness 2418) has occurred while \output is active []
 
 <./Graphs/Figure2.0.png, id=53, 586.19pt x 276.03125pt>
 File: ./Graphs/Figure2.0.png Graphic file (type png)
 <use ./Graphs/Figure2.0.png>
-Package pdftex.def Info: ./Graphs/Figure2.0.png  used on input line 270.
+Package pdftex.def Info: ./Graphs/Figure2.0.png  used on input line 267.
 (pdftex.def)             Requested size: 205.16957pt x 96.61238pt.
 
-Underfull \hbox (badness 1221) in paragraph at lines 280--284
+Underfull \hbox (badness 1221) in paragraph at lines 277--281
 \T1/pplx/m/n/10 (+20) (row trans-porta-tion) and a mi-nor key (5
  []
 
 
-Underfull \hbox (badness 1859) in paragraph at lines 280--284
+Underfull \hbox (badness 1859) in paragraph at lines 277--281
 \T1/pplx/m/n/10 (+20) let-ters), the in-for-ma-tion is al-ready quite
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--284
+Underfull \hbox (badness 10000) in paragraph at lines 277--281
 
  []
 
 
-LaTeX Warning: Empty `thebibliography' environment on input line 297.
+LaTeX Warning: Empty `thebibliography' environment on input line 294.
 
 
-Underfull \hbox (badness 1845) in paragraph at lines 291--297
+Underfull \hbox (badness 1845) in paragraph at lines 288--294
 \T1/pplx/m/n/8 (+20) [1]N. Hamza, ^^PRow trans-po-si-tion ci-phers - ppt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--297
+Underfull \hbox (badness 10000) in paragraph at lines 288--294
 \T1/pplx/m/n/8 (+20) down-load,^^Q Slide-Player. [On-line]. Avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--297
+Underfull \hbox (badness 10000) in paragraph at lines 288--294
 \T1/pplx/m/n/8 (+20) https://slideplayer.com/slide/13205094/. [Ac-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--297
+Underfull \hbox (badness 10000) in paragraph at lines 288--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--297
+Underfull \hbox (badness 10000) in paragraph at lines 288--294
 \T1/pplx/m/n/8 (+20) [2]^^PTransposition ci-pher,^^Q Wikipedia, 23-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--297
+Underfull \hbox (badness 10000) in paragraph at lines 288--294
 \T1/pplx/m/n/8 (+20) Feb-2022. [On-line]. Avail-able: https//
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--297
+Underfull \hbox (badness 10000) in paragraph at lines 288--294
 \T1/pplx/m/n/8 (+20) en.wikipedia.org/wiki/Transposition_cipher. [Ac-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--297
+Underfull \hbox (badness 10000) in paragraph at lines 288--294
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--297
+Underfull \hbox (badness 10000) in paragraph at lines 288--294
 
  []
 
-[3 <./Graphs/Figure2.0.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 302.
+
+Underfull \vbox (badness 3884) has occurred while \output is active []
+
+ [3 <./Graphs/Figure2.0.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 299.
  [4
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 302.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 299.
  (./INCS741GroupProject02.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 302.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 302.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 299.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 299.
 Package rerunfilecheck Info: File `INCS741GroupProject02.out' has not changed.
 (rerunfilecheck)             Checksum: 8104AE5FE7CB7419D68801CF79136153;212.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 302.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 299.
  ) 
 Here is how much of TeX's memory you used:
  12038 strings out of 480608
@@ -871,7 +875,7 @@ xmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2020/texm
 f-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2020/texmf-dist/
 fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/t
 ype1/urw/palatino/uplri8a.pfb>
-Output written on INCS741GroupProject02.pdf (4 pages, 418196 bytes).
+Output written on INCS741GroupProject02.pdf (4 pages, 418086 bytes).
 PDF statistics:
  102 PDF objects out of 1000 (max. 8388607)
  73 compressed objects within 1 object stream
