@@ -125,7 +125,7 @@ The cipher appeared thousands of years ago but was heavily exploited from the 2n
 \section{Encryption Implementation}
 To implement the row transposition encryption, we utilizes the key as a sequence to switch the columns in a two-dimension matrix to form a row transposition matrix(Figure 3).
 
-Take the key 'NYITV' as a example (Figure 1), the algorithm uses the 26 English letters to find the number sequence '14023'. Then, the algorithm arranges the columns by the order of this number sequence.The encryption algorithm writes letters of message out in rows over a specified number of columns which equals to the key length '5' (Figure 2). Then, reorder columns in the matrix (Figure 3).
+Take the key 'NYITV' as a example (Figure 1), the algorithm uses the 26 English letters to find the number sequence '14023'. Then, the algorithm arranges the columns by the order of this number sequence.The encryption algorithm writes letters of message out in rows over a specified number of columns which equals to the key length '5' (Figure 2). Then, reorder columns in the matrix (Figure 3). \\
 
 
 
@@ -136,7 +136,17 @@ Take the key 'NYITV' as a example (Figure 1), the algorithm uses the 26 English 
   \label{fig:testfig1}
 \end{figure}
 
+The reorder sequence is 20341 to decryption by using the same row exchange method.\\
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.45]{./Graphs/Figure1.5.png}
+  \caption{Task2-Decryption Sequence Order}
+  \label{fig:testfig1}
+\end{figure}
+
+
+Regards for the current assignment, the empty space would be replaced by the capital letter 'X'.  Append the rows to form the ciphertext.\\
 
 \begin{figure}[H]
   \centering
@@ -144,14 +154,7 @@ Take the key 'NYITV' as a example (Figure 1), the algorithm uses the 26 English 
   \caption{Task1-Message Matrix}
   \label{fig:testfig1}
 \end{figure}
-Regards for the current assignment, the empty space would be replaced by the capital letter 'X'.  Append the rows to form the ciphertext.
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale=0.45]{./Graphs/Figure1.3.png}
-  \caption{Task1-Row Transposition Matrix}
-  \label{fig:testfig1}
-\end{figure}
 
 The following figure 4 displays the encrypted message.
 
@@ -166,33 +169,20 @@ The following figure 4 displays the encrypted message.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.45]{./Graphs/Figure1.6.png}
+  \includegraphics[scale=0.35]{./Graphs/Figure1.6.png}
   \caption{Task1-Output}
   \label{fig:testfig1}
 \end{figure}
 
 Figure 5 shows the result of the encrypted plaintext. Further, we use the decrytion algorithm to double check the answer. The result match to the original text.\\ \\ 
 
-\vspace*{-0.35cm}
+
 \section{Decryption Implementation}
 
 The decryption algorithm is the reverse order of the encryption algorithm. The algorithm first writes the encrypted message out in rows. Then, it reads off the message by recording columns. \\
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale=0.65]{./Graphs/Figure1.5.png}
-  \caption{Task2-Decryption Sequence Order}
-  \label{fig:testfig1}
-\end{figure}
 
-The reorder sequence is 20341 to decryption by using the same row exchange method.\\
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale=0.4]{./Graphs/Figure1.7.png}
-  \caption{Task2-Message Matrix}
-  \label{fig:testfig1}
-\end{figure}
 
 \begin{figure}[H]
   \centering
@@ -203,6 +193,14 @@ The reorder sequence is 20341 to decryption by using the same row exchange metho
 
 \vspace*{0.0cm}
 The first part finds the decoding sequence from the key 'NYITV'. Then, write the encrypted message into a 2D matrix 'plainTextArray'. Next, use the RowTranspositionMatrix to record the rearrangement of the 'plainTextArray'. The last step, utilize the stringbuilder to build the encrpted message line by line through the RowTranspositionMatrix.The following is the pseudocode for the row transposition cipher algorithm : \\
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.75]{./Graphs/Figure1.9.png}
+  \caption{Task2-Decrypted Message}
+  \label{fig:testfig1}
+\end{figure}
 
 
 \floatname {algorithm} {\footnotesize Row Transposition Decryption Algorithm}
@@ -223,12 +221,12 @@ The first part finds the decoding sequence from the key 'NYITV'. Then, write the
 	  \State $Sort\hspace{0.1cm} the \hspace{0.1cm}keyArray$
 	  \State $String s \gets String.valueOf(keyArray)$	  
 	  \State \footnotesize$ $
+	  \State $x \gets 0$
       \For{\texttt{each char c in dArray}}
         \State $keyPosition[x] \gets s.indexOf(c)$
         \State $Increament \hspace{0.1cm} x \hspace{0.1cm} by \hspace{0.1cm}1$	
       \EndFor
      
-      \State \footnotesize$ $
       \State $cols \gets keylen$
       \State $rows \gets 0$
 	  \If{$C's \hspace{0.1cm}length \hspace{0.1cm} mod \hspace{0.1cm} cols \hspace{0.1cm} equals \hspace{0.1cm} 0$} \Comment \tiny{calculate rows}
@@ -238,37 +236,32 @@ The first part finds the decoding sequence from the key 'NYITV'. Then, write the
      \EndIf
      
       \State \footnotesize$ $
-      \State $plainTextArray \gets char[rows][cols]$
+      \State  $RowMatrix \gets char[rows][cols] $
        
  
 	  \State $k \gets 0$
 	  \For{\texttt{i to rows}}
 	  	\For{\texttt{j to cols}}
         	\If{$count \hspace{0.1cm}k\hspace{0.1cm} equals\hspace{0.1cm} message \hspace{0.1cm} C's \hspace{0.1cm}length$}
-        	   \State $while \hspace{0.1cm} k \hspace{0.1cm} equals \hspace{0.1cm} message's \hspace{0.1cm} length \hspace{0.1cm} and \hspace{0.1cm} j \hspace{0.1cm} less \hspace{0.1cm} than \hspace{0.1cm} cols \hspace{0.1cm} keep \hspace{0.1cm} $
-        	   \State $add \hspace{0.1cm}'X' \hspace{0.1cm} to \hspace{0.1cm} plainTextArray[i][j]$
+        	   \State $while \hspace{0.1cm} k \hspace{0.1cm} equals \hspace{0.1cm} message's \hspace{0.1cm} length \hspace{0.1cm} and \hspace{0.1cm} j \hspace{0.1cm}   $
+        	   \State $less \hspace{0.1cm}than \hspace{0.1cm} cols \hspace{0.1cm} keep \hspace{0.1cm}add \hspace{0.1cm}'X' \hspace{0.1cm} to \hspace{0.1cm}$
+        	   \State $RowMatrix[i][j]$
         	   \State $break$
-        	   \State $assign \hspace{0.1cm}  plainTextArray[i][j] \hspace{0.1cm}  from \hspace{0.1cm} messageArray[k]$
+        	  
+        	   \State $assign \hspace{0.1cm}  RowMatrix[i][j] \hspace{0.1cm}  from$
+        	   \State $messageArray[k]$
         	   \State \footnotesize $Increament\hspace{0.1cm} k\hspace{0.1cm} by \hspace{0.1cm}1$	
         	   \State \footnotesize$ $
 		    \EndIf
         \EndFor  
       \EndFor  
-         
-      \State  $rowTranspositionMatrix \gets char[rows][cols] $
-      \For{\texttt{i to rows}}
-	  	\For{\texttt{j to cols}} \Comment \tiny{each column read by the key order}
-	  		\State \footnotesize$assign \hspace{0.1cm} RowTranspositionMatrix[i][j]  \hspace{0.1cm}  $ 
-	  		\State $from \hspace{0.1cm} plainTextArray[i][keyPosition[j]]$ 
-        \EndFor  
-      \EndFor    
-      
-      \State \footnotesize$ $
-      
+               
       \State \footnotesize $ StringBuilder\hspace{0.1cm} str \gets StringBuilder()$
       \For{\texttt{i to rows}}
 	  	\For{\texttt{j to cols}}
-        	\State $str.append(RowTranspositionMatrix[i][j])$   	
+	  		\If{$RowMatrix[i][j] \hspace{0.1cm} != \hspace{0.1cm} to \hspace{0.1cm} 'X'$} 
+	  		\State $ str.append(RowMatrix[i][j]) $
+		    \EndIf
         \EndFor  
       \EndFor  
       
@@ -277,15 +270,6 @@ The first part finds the decoding sequence from the key 'NYITV'. Then, write the
   \end{algorithmic}
 \end{algorithm}
 
-
-
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale=0.75]{./Graphs/Figure1.9.png}
-  \caption{Task2-Decrypted Message}
-  \label{fig:testfig1}
-\end{figure}
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.36]{./Graphs/Figure2.0.png}
@@ -294,6 +278,7 @@ The first part finds the decoding sequence from the key 'NYITV'. Then, write the
 \end{figure}
 
 Figure 10 shows the result of the decrypted plaintext. Further, we use the encrytion algorithm to double check the answer. The result match to the original encrypted text.
+
 
 \section{Conclusion}
 
@@ -306,7 +291,7 @@ We also demonstrate in the project that the information is decrypted, just doing
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
 %----------------------------------------------------------------------------------------
-\vspace*{20.0cm}
+\vspace*{2.5cm}
 \begin{thebibliography}{} % Bibliography - this is intentionally simple in this template
 
 \footnotesize[1]N. Hamza, “Row transposition ciphers - ppt download,” SlidePlayer. [Online]. Available: https://slideplayer.com/slide/13205094/. [Accessed: 28-Feb-2022].  \\ \\
