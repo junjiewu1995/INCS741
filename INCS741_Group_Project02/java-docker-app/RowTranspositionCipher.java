@@ -3,174 +3,154 @@ import java.util.*;
 
 public class RowTranspositionCipher {
 
-	private static int  [] keyPosition;
-	private static char [] keyArray;
-	private static char [] messageArray;
-	private static char [][] plainTextArray;
-	private static char [] dArray;
-	private static char [][] RowTranspositionMatrix;
+    private static int  [] keyPosition;
+    private static char [] keyArray;
+    private static char [] messageArray;
+    private static char [][] RowTranspositionMatrix;
+    private static char [] dArray;
 
-	private static String rtcencrytion(String key, String message) {
+    private static String rtcencrytion(String key, String message) {
 
-		int keylen= key.length();
-		keyArray = key.toCharArray();
-		messageArray = message.toCharArray(); 
-		keyPosition = new int [keylen];
+        int keylen= key.length();
+        keyArray = key.toCharArray();
+        messageArray = message.toCharArray(); 
+        keyPosition = new int [keylen];
 
-		/* Sort the Key */
-		Arrays.sort(keyArray);
+        /* Sort the Key */
+        Arrays.sort(keyArray);
 
-		String s = String.valueOf(keyArray);
-		dArray = key.toCharArray();
+        /* KeyPosition records the key's postion */
+        int x = 0;
+        for (char c : keyArray) {
+            keyPosition[x++] = key.indexOf(c);
+            System.out.print(key.indexOf(c) + " ");
+        }
+        System.out.println();
 
-		/* Decrypt the key and arrage the message back to normal position */
-		int x = 0;
-		for (char c : dArray) {
-			keyPosition[x++] = s.indexOf(c);
-			//System.out.print(s.indexOf(c));
-		}
-		//System.out.println("\n");
+        /* Find the rows length */
+        int cols = keylen, rows = 0;
+        if (message.length() % cols == 0) rows = message.length() / cols;
+        else rows = message.length() / cols + 1;
 
-		/* Find the rows length */
-		int cols = keylen, rows = 0;
-		if (message.length() % cols == 0) rows = message.length() / cols;
-		else rows = message.length() / cols + 1;
+        /* Message to CharArray */
+        RowTranspositionMatrix = new char[rows][cols]; 
 
-		/* Message to CharArray */
-		plainTextArray = new char[rows][cols]; 
-		RowTranspositionMatrix = new char[rows][cols]; 
-		
-		/* Insert each character to the matrix */
-		int k = 0; 
-		for (int i = 0; i < rows; ++ i) { 
-			for (int j = 0; j < cols; ++ j) { 
-				while (k == message.length() && j < cols) {
-					plainTextArray[i][j] = 'X';
-					//System.out.print(plainTextArray[i][j]);
-					j++;
-				}
-				if (k == message.length()) break;
-				plainTextArray[i][j] = messageArray[k++]; 
-				// System.out.print(plainTextArray[i][j]);
-			} 
-			// System.out.println();
-		} 
+        /* Insert each character to the matrix */
+        int k = 0; 
+        for (int i = 0; i < rows; ++ i) { 
+            for (int j = 0; j < cols; ++ j) { 
+                while (k == message.length() && j < cols) {
+                    RowTranspositionMatrix[i][j] = 'X';
+                    // System.out.print(RowTranspositionMatrix[i][j]);
+                    j++;
+                }
+                if (k == message.length()) break; 
+                RowTranspositionMatrix[i][j] = messageArray[k++];  
+                // System.out.print(RowTranspositionMatrix[i][j] + " "); 
+            } 
+            // System.out.println(); 
+        } 
 
-		/* Create the row transposition matrix */
-		for (int i = 0; i < rows; i ++) {
-			for (int j = 0; j < cols; j ++) {
-				RowTranspositionMatrix[i][j] = plainTextArray[i][keyPosition[j]];
-			} 
-		}
+        /* Append the encrypted message line by line through matrix */
+        StringBuilder str = new StringBuilder(); 
+        for (int i = 0; i < cols; i ++) {
+            for (int j = 0; j < rows; j ++) {
+                str.append(RowTranspositionMatrix[j][keyPosition[i]]);  
+            } 
+        }
+        return str.toString(); 
+    } 
 
-		/* Append the encrypted message line by line through matrix */
-		StringBuilder str = new StringBuilder(); 
-		for (int i = 0; i < rows; i ++) {
-			for (int j = 0; j < cols; j ++) {
-				str.append(RowTranspositionMatrix[i][j]); 
-				// System.out.print(RowTranspositionMatrix[i][j]);
-			} 
-			// System.out.println();
-		}
+    
+    private static String rtcdecryption(String key, String message) {
 
-		return str.toString(); 
-	} 
+        int keylen = key.length();
+        keyArray = key.toCharArray();
+        messageArray = message.toCharArray();
+        keyPosition = new int [keylen];
 
-	
-	private static String rtcdecryption(String key, String message) {
+        /* Sort the Key */
+        Arrays.sort(keyArray);
 
-		int keylen = key.length();
-		keyArray = key.toCharArray();
-		messageArray = message.toCharArray();
-		keyPosition = new int [keylen];
+        /* KeyPosition records the key's postion */
+        int x = 0;
+        for (char c : keyArray) {
+            keyPosition[x++] = key.indexOf(c);
+            System.out.print(key.indexOf(c) + " ");
+        }
+        System.out.println();
 
-		/* Sort the Key */
-		Arrays.sort(keyArray);
+        /* Find the rows length */
+        int cols= keylen, rows = 0;
+        if (message.length() % cols == 0) rows = message.length() / cols;
+        else rows = message.length() / cols + 1;
 
-		/* KeyPosition records the key's postion */
-		int x = 0;
-		for (char c : keyArray) {
-			keyPosition[x++] = key.indexOf(c);
-			//System.out.print(key.indexOf(c));
-		}
-		//System.out.println();
+        RowTranspositionMatrix = new char[rows][cols];
 
-		/* Find the rows length */
-		int cols= keylen, rows = 0;
-		if (message.length() % cols == 0) rows = message.length() / cols;
-		else rows = message.length() / cols + 1;
+        /* Message to CharArray */
+        int k = 0;
+        for (int i = 0; i < cols; ++ i) {
+            for (int j = 0; j < rows; ++ j) {
+                if (k == message.length()) break;
+                RowTranspositionMatrix[j][keyPosition[i]] = messageArray[k++];
+            }
+        }
 
-		plainTextArray = new char[rows][cols];
-		RowTranspositionMatrix = new char[rows][cols]; 
+        /* Append the Encrypted Message Line by Line through matrix */
+        StringBuilder str = new StringBuilder();
+        for (int i = 0; i < rows; i ++) {
+            for (int j = 0; j < cols; j ++) {
+                if (RowTranspositionMatrix[i][j] != 'X'){
+                    str.append(RowTranspositionMatrix[i][j]);
+                }
+            }  
+        }
+        return str.toString();
+    }
 
-		/* Message to CharArray */
-		int k = 0;
-		for (int i = 0; i < rows; ++ i) {
-			for (int j = 0; j < cols; ++ j) {
-				if (k == message.length()) break;
-				plainTextArray[i][j] = messageArray[k++];
-				//System.out.print(plainTextArray[i][j] + " ");
-			}
-			//System.out.println();
-		}
+    public static void main (String [] args) {
 
-		/* Append the encrypted message line by line through matrix */
-		StringBuilder str = new StringBuilder();
-		for (int i = 0; i < rows; i ++) {
-			for (int j = 0; j < cols; j ++) {
-				if (plainTextArray[i][keyPosition[j]] != 'X')
-				{
-					str.append(plainTextArray[i][keyPosition[j]]);
-					//System.out.print(plainTextArray[i][keyPosition[j]]);
-				}
-			}
-			//System.out.println();
-		}
-		return str.toString();
-	}
+        /**
+         * 
+         * @ Hard code input for the assignment
+        **/
+        String key = "NYITV"; 
+        String enmessage = "CRYPTOLOGY IS THE PRACTICE AND STUDY OF TECHNIQUES FOR SECURE COMMUNICATION IN THE PRESENCE OF THIRD PARTIES CALLED ADVERSARIES"; 
+        String demessage = "eroohalpsmeptroohalsefxphtnlefhhxtwstiiiieoecrastitosplmgeasentmitrasnefylypnhiasnetoiroitaetaxoeetonicrasetltesnicrfwmurnhrrhitrcrxhtpipsrmaimiitpiphlaleiucciptotpe"; 
+        key = key.replaceAll("\\s+", ""); 
+        enmessage = enmessage.toLowerCase();
+        demessage = demessage.toLowerCase();
+        enmessage = enmessage.replaceAll("\\s+", ""); 
+        demessage = demessage.replaceAll("\\s+", ""); 
 
-	public static void main (String [] args) {
+        /**
+         * @Read the input from stdin
+         * Scanner sc = new Scanner(System.in);
+         * String key = sc.readline().trim();
+         * String enmessage = sc.readline().trim().toLowerCase();
+         * String demessage = sc.readline().trim().toLowerCase();
+        */
 
-		/**
-		 * 
-		 * @ Hard code input for the assignment
-		 **/
-		String key = "NYITV"; 
-		String enmessage = "CRYPTOLOGY IS THE PRACTICE AND STUDY OF TECHNIQUES FOR SECURE COMMUNICATION IN THE PRESENCE OF THIRD PARTIES CALLED ADVERSARIES"; 
-		String demessage = "eroohalpsmeptroohalsefxphtnlefhhxtwstiiiieoecrastitosplmgeasentmitrasnefylypnhiasnetoiroitaetaxoeetonicrasetltesnicrfwmurnhrrhitrcrxhtpipsrmaimiitpiphlaleiucciptotpe"; 
+        System.out.println("Test 1 ======================================> ");
+        System.out.println("M : [ " + enmessage + " ]");
+        System.out.println("w : [ " + key + " ]");
+        String res = rtcencrytion(key, enmessage); 
+        System.out.println("C : [ " + res + " ]");      
+        String decode = rtcdecryption(key, res).trim();
+        System.out.println("D : [ " + decode + " ]");
+        System.out.println("Comparing M and D : " + enmessage.equals(decode) + "\n");
 
-		/**
-		 * @Read the input from stdin
-		 * Scanner sc = new Scanner(System.in);
-		 * String key = sc.readline().trim();
-		 * String enmessage = sc.readline().trim().toLowerCase();
-		 * String demessage = sc.readline().trim().toLowerCase();
-		 */
+        System.out.println("Test 2 ======================================> ");
+        System.out.println("C : [ " + demessage + " ]");    
+        System.out.println("w : [ " + key + " ]");
+        String d = rtcdecryption(key, demessage);
+        System.out.println("M : [ " + d + " ]");
+        String r = rtcencrytion(key, d).trim(); 
+        System.out.println("E : [ " + r + " ]");
+        String text = "therowtranspositioncipherisafairlysimpleeasytoimplementcipheritisatranspositioncipherthatfollowsasimpleruleformixingupthecharactersintheplaintexttoformtheciphertextx";
+        System.out.println("Comparing C and E : " + d.equals(text) + "\n");
 
-		key	= key.replaceAll("\\s+", ""); 
-		enmessage = enmessage.toLowerCase();
-		demessage = demessage.toLowerCase();
-		enmessage = enmessage.replaceAll("\\s+", ""); 
-		demessage = demessage.replaceAll("\\s+", ""); 
-
-		System.out.println("Test 1 ======================================> "); 
-		System.out.println("M : [ " + enmessage + " ]"); 
-		System.out.println("w : [ " + key + " ]"); 
-		String res = rtcencrytion(key, enmessage); 
-		System.out.println("C : [ " + res + " ]"); 		
-		String decode = rtcdecryption(key, res).trim(); 
-		System.out.println("D : [ " + decode + " ]"); 
-		System.out.println("Comparing M and D : " + enmessage.equals(decode) + "\n"); 
-
-		System.out.println("Test 2 ======================================> "); 
-		System.out.println("C : [ " + demessage + " ]"); 
-		System.out.println("w : [ " + key + " ]"); 
-		String d = rtcdecryption(key, demessage); 
-		System.out.println("M : [ " + d + " ]"); 
-		String r = rtcencrytion(key, d).trim(); 
-		System.out.println("E : [ " + r + " ]"); 
-		System.out.println("Comparing C and E : " + demessage.equals(r) + "\n"); 
-	}
+    }
 }
 
 
