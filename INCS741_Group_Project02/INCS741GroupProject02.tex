@@ -123,11 +123,9 @@ The cipher appeared thousands of years ago but was heavily exploited from the 2n
 
 
 \section{Encryption Implementation}
-To implement the row transposition encryption, we utilize the key as a sequence to switch the columns in a two-dimension matrix to form a row transposition matrix(Figure 3).
+To implement the row transposition encryption, we utilize the key as a sequence to either read or fill the columns in a two-dimension matrix as we encrypt or decrypt the input message (Figure 2 \& Figure 5).
 
-Take the key 'NYITV' as an example (Figure 1), the algorithm uses the 26 English letters to find the number sequence '14023'. Then, the algorithm arranges the columns by the order of this number sequence. The encryption algorithm writes letters of message out in rows over a specified number of columns which equals the key length '5' (Figure 2). Then, reorder columns in the matrix (Figure 3). \\
-
-
+Take the key 'NYITV' as an example (Figure 1), the algorithm uses the 26 English letters to find the number sequence '14023', which means we read the 0 in the matrix's Col2 1st and 1 in the matrix Col0 2nd and so on. The length of the key defines the number of columns we use in the algorithm.
 
 \begin{figure}[!ht]
   \centering
@@ -136,7 +134,7 @@ Take the key 'NYITV' as an example (Figure 1), the algorithm uses the 26 English
   \label{fig:testfig1}
 \end{figure}
 
-The sequence reordering is '20341'(Figure1) for decryption in reading the columns of 2D Matrix, which transfers from the key order '14023'. For instance, the 0 column read 1st and it is in the RowTranspositionMatrix column 2. In Figure 2, we read columns by following the reordering sequence '20341' in the matrix to get the encryption message.
+The sequence reordering is '20341' (Figure 1) for decryption in reading the columns from 2D Matrix that transfers from the key order '14023'. In Figure 2, we read column by column in the reordering sequence '20341' from the matrix to produce our encrypted message.
 
 
 Regards for the current assignment, the empty space would be replaced by the capital letter 'X' to append the rows to form the ciphertext.\\
@@ -172,7 +170,7 @@ The Figure 4 shows the result of the encrypted message. Further, we use the decr
 \vspace*{-0.10cm}
 \section{Decryption Implementation}
 
-The decryption algorithm put the letters in columns by the key order '14023'; however, as we fill the columns by following the order of '20341'(Figure 5, left). Take '0' as an example, the '0' is filled up 1st in the RowMatrix's 2nd column. Then, it reads off the message by '01234' row by row(Figure 5, right). \\
+The decryption algorithm put the letters in columns by the key order '14023'; however, as we fill the columns by following the order of '20341'(Figure 5, left). Take '0' as an example, the '0' is filled up 1st in the RowMatrix's 2nd column. Then, it reads off the message by '01234' row by row(Figure 5, right). The result decrypted message shows in Figure 6. \\
 
 \begin{figure}[H]
   \centering
