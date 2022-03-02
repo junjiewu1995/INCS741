@@ -131,14 +131,14 @@ public class RowTranspositionCipher {
          * String demessage = sc.readline().trim().toLowerCase();
         */
 
-        // System.out.println("Test 1 ======================================> ");
-        // System.out.println("M : [ " + enmessage + " ]");
-        // System.out.println("w : [ " + key + " ]");
-        // String res = rtcencrytion(key, enmessage); 
-        // System.out.println("C : [ " + res + " ]");      
-        // String decode = rtcdecryption(key, res).trim();
-        // System.out.println("D : [ " + decode + " ]");
-        // System.out.println("Comparing M and D : " + enmessage.equals(decode) + "\n");
+        System.out.println("Test 1 ======================================> ");
+        System.out.println("M : [ " + enmessage + " ]");
+        System.out.println("w : [ " + key + " ]");
+        String res = rtcencrytion(key, enmessage); 
+        System.out.println("C : [ " + res + " ]");      
+        String decode = rtcdecryption(key, res).trim();
+        System.out.println("D : [ " + decode + " ]");
+        System.out.println("Comparing M and D : " + enmessage.equals(decode) + "\n");
 
         System.out.println("Test 2 ======================================> ");
         System.out.println("C : [ " + demessage + " ]");    

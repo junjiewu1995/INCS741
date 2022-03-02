@@ -119,13 +119,13 @@ The cipher appeared thousands of years ago but was heavily exploited from the 2n
 
 \section{Introduction}
 
-\lettrine[nindent=2em,lines=1] {T}he cipher appeared thousands of years ago but was heavily exploited from the 2nd World War in which information exchanged between enemies, even encrypted, was intercepted and deciphered. There are two widely explored types of encryptions (transposition and substitution) that, when worked independently, can be solved quickly. Still, protocols have been created and improved that fundamentally use these two techniques repetitively. By definition, transposition cypher changes the plaintext order and rearranges to get ciphertext. In this group project, we used “Row Transposition Cipher,” where you write your plaintext in rows of fixed length (key size), and we write by columns in key order. We can use the procedure to enhance the complexity of a more complex cipher-text.
+\lettrine[nindent=2em,lines=1] {T}he cipher appeared thousands of years ago but was heavily exploited from the 2nd World War in which information exchanged between enemies, even encrypted, was intercepted and deciphered. There are two widely explored types of encryptions (transposition and substitution) that, when worked independently, can be solved quickly. Still, protocols have been created and improved that fundamentally use these two techniques repetitively. By definition, transposition cipher changes the plaintext order and rearranges to get ciphertext. In this group project, we used “Row Transposition Cipher,” where you write your plaintext in rows of fixed length (key size), and we write by columns in key order. We can use the procedure to enhance the complexity of a more complex cipher-text.
 
 
 \section{Encryption Implementation}
-To implement the row transposition encryption, we utilizes the key as a sequence to switch the columns in a two-dimension matrix to form a row transposition matrix(Figure 3).
+To implement the row transposition encryption, we utilize the key as a sequence to switch the columns in a two-dimension matrix to form a row transposition matrix(Figure 3).
 
-Take the key 'NYITV' as a example (Figure 1), the algorithm uses the 26 English letters to find the number sequence '14023'. Then, the algorithm arranges the columns by the order of this number sequence.The encryption algorithm writes letters of message out in rows over a specified number of columns which equals to the key length '5' (Figure 2). Then, reorder columns in the matrix (Figure 3). \\
+Take the key 'NYITV' as an example (Figure 1), the algorithm uses the 26 English letters to find the number sequence '14023'. Then, the algorithm arranges the columns by the order of this number sequence. The encryption algorithm writes letters of message out in rows over a specified number of columns which equals the key length '5' (Figure 2). Then, reorder columns in the matrix (Figure 3). \\
 
 
 
@@ -179,7 +179,7 @@ Figure 5 shows the result of the encrypted plaintext. Further, we use the decryt
 \vspace*{-3.0cm}
 \section{Decryption Implementation}
 
-The decryption algorithm put the letters in columns by the key order '14023';however, as we fill the columns in the order '20314'. Take '0' as a example, The '0' is filled up 1st in the 2nd column. The algorithm first writes the encrypted message out in rows. Then, it reads off the message by recording columns. \\
+The decryption algorithm put the letters in columns by the key order '14023'; however, as we fill the columns in the order '20341'. Take '0' as an example, The '0' is filled up 1st in the 2nd column. The algorithm first writes the encrypted message out in rows. Then, it reads off the message by recording columns. \\
 
 \begin{figure}[H]
   \centering
@@ -198,7 +198,7 @@ The decryption algorithm put the letters in columns by the key order '14023';how
 
 The above is the declassified information. \\
 
-The first part finds the decoding sequence from the key 'NYITV'. Then, write the encrypted message into a 2D RowTranspositionMatrix. Next, use the RowTranspositionMatrix to record the rearrangement of the RowTranspositionMatrix . The last step, utilize the stringbuilder to build the encrpted message line by line through the RowMatrix.The following is the pseudocode for the row transposition cipher algorithm : \\ \\ \\ \\
+The first part finds the decoding sequence from the key 'NYITV'. Then, write the encrypted message into a 2D RowTranspositionMatrix. Next, use the RowTranspositionMatrix to record the rearrangement of the RowTranspositionMatrix. In the last step, utilize the StringBuilder to build the encrypted message line by line through the RowMatrix.The following is the pseudocode for the row transposition cipher algorithm : \\ \\ \\ \\
 
 \vspace*{-1.5cm}
 
@@ -269,7 +269,7 @@ The first part finds the decoding sequence from the key 'NYITV'. Then, write the
   \end{algorithmic}
 \end{algorithm}
 
-The following figure 10 shows the result of the decrypted plaintext. Further, we use the encrytion algorithm to double check the answer. The result match to the original encrypted text.
+The following figure 10 shows the result of the decrypted plaintext. Further, use the encryption algorithm to double-check the answer. The result matches the original encrypted text.
 
 \begin{figure}[H]
   \centering
@@ -283,9 +283,9 @@ The following figure 10 shows the result of the decrypted plaintext. Further, we
 
 \section{Conclusion}
 
-With the growing use of computers and the Internet, and an increasing need to transmit information quickly and securely, the use of encryption through existing protocols (AES, RSA, 3DES, etc.) information security that uses the two types of transposition mentioned (transposition and substitution).
+With the growing use of computers and the internet, and an increasing need to transmit information quickly and securely, the use of encryption through existing protocols (AES, RSA, 3DES, etc.) information security that uses the two types of transposition mentioned (transposition and substitution).
 
-In this example, we can see that using only one round of encryption and a minor key (5 letters), the information is already quite challenging to decipher, and with the use of the protocols mentioned above that repeatedly use the types of transposition, it becomes almost impossible to decipher the messages.
+In the project, we can see that using only one round of encryption and a minor key (5 letters), the information is already quite challenging to decipher, and with the use of the protocols mentioned above that repeatedly use the types of transposition, it becomes almost impossible to decipher the messages.
 
 We also demonstrate in the project that the information is decrypted, just doing the inverse of the encryption procedure that needs to be done by the person who will receive the message. \\ 
 
