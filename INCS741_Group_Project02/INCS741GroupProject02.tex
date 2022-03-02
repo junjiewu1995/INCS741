@@ -136,22 +136,15 @@ Take the key 'NYITV' as an example (Figure 1), the algorithm uses the 26 English
   \label{fig:testfig1}
 \end{figure}
 
-The reorder sequence is '20341' for decryption in the columns of 2D Matrix. \\
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale=0.45]{./Graphs/Figure1.5.png}
-  \caption{Task2-Decryption Sequence Order}
-  \label{fig:testfig1}
-\end{figure}
+The reorder sequence is '20341' for decryption in the columns of 2D Matrix, which transfers from the key order '14023'. For instance, the 0 column read 1st and it is in the RowMatrix column 2.
 
 
 Regards for the current assignment, the empty space would be replaced by the capital letter 'X'.  Append the rows to form the ciphertext.\\
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.45]{./Graphs/Figure1.2.png}
-  \caption{Task1-Message Matrix}
+  \includegraphics[scale=0.4]{./Graphs/Figure1.2.png}
+  \caption{Task1-Row Transcription Matrix}
   \label{fig:testfig1}
 \end{figure}
 
@@ -176,7 +169,7 @@ The following figure 4 displays the encrypted message.
 
 Figure 5 shows the result of the encrypted plaintext. Further, we use the decrytion algorithm to double check the answer. The result match to the original text.\\ 
 
-\vspace*{-3.0cm}
+\vspace*{-0.10cm}
 \section{Decryption Implementation}
 
 The decryption algorithm put the letters in columns by the key order '14023'; however, as we fill the columns in the order '20341'. Take '0' as an example, The '0' is filled up 1st in the 2nd column. The algorithm first writes the encrypted message out in rows. Then, it reads off the message by recording columns. \\
@@ -217,8 +210,8 @@ The first part finds the decoding sequence from the key 'NYITV'. Then, write the
       \State $messageArray \gets C.toCharArray() $
       \State $keyPosition \gets int [keylen]$
       \State \footnotesize$ $
-	  \State $Sort\hspace{0.1cm} the \hspace{0.1cm}keyArray$
-	  \State $String s \gets String.valueOf(keyArray)$	  
+	  \State $Sort\hspace{0.1cm} the \hspace{0.1cm}keyArray$  \Comment \tiny{sort the keyArray and assign it to a string}
+	  \State\footnotesize $String s \gets String.valueOf(keyArray)$	  
 	  \State \footnotesize$ $
 	  \State $x \gets 0$
       \For{\texttt{each char c in dArray}}
@@ -247,7 +240,7 @@ The first part finds the decoding sequence from the key 'NYITV'. Then, write the
         	   \State $RowMatrix[i][j]$
         	   \State $break$
         	  
-        	   \State $assign \hspace{0.1cm}  RowMatrix[i][j] \hspace{0.1cm}  from$
+        	   \State $assign \hspace{0.1cm}  RowMatrix[j][keyPosition[i]] \hspace{0.1cm}  from$
         	   \State $messageArray[k]$
         	   \State \footnotesize $Increament\hspace{0.1cm} k\hspace{0.1cm} by \hspace{0.1cm}1$	
         	   \State \footnotesize$ $
@@ -292,7 +285,7 @@ We also demonstrate in the project that the information is decrypted, just doing
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
 %----------------------------------------------------------------------------------------
-\vspace*{1.5cm}
+\vspace*{5.5cm}
 \begin{thebibliography}{} % Bibliography - this is intentionally simple in this template
 
 \footnotesize[1]N. Hamza, “Row transposition ciphers - ppt download,” SlidePlayer. [Online]. Available: https://slideplayer.com/slide/13205094/. [Accessed: 28-Feb-2022].  \\ \\

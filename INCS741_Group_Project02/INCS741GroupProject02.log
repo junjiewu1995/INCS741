@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.12)  1 MAR 2022 22:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.12)  1 MAR 2022 23:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -495,9 +495,6 @@ LaTeX Warning: Label `fig:testfig1' multiply defined.
 
 LaTeX Warning: Label `fig:testfig1' multiply defined.
 
-
-LaTeX Warning: Label `fig:testfig1' multiply defined.
-
 )
 \openout1 = `INCS741GroupProject02.aux'.
 
@@ -662,127 +659,110 @@ Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
-<./Graphs/Figure1.1.png, id=20, 611.28375pt x 150.5625pt>
+<./Graphs/Figure1.1.png, id=20, 519.9425pt x 151.56625pt>
 File: ./Graphs/Figure1.1.png Graphic file (type png)
 <use ./Graphs/Figure1.1.png>
 Package pdftex.def Info: ./Graphs/Figure1.1.png  used on input line 134.
-(pdftex.def)             Requested size: 183.38654pt x 45.16908pt.
+(pdftex.def)             Requested size: 155.98395pt x 45.47021pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
-
- []
-
-<./Graphs/Figure1.5.png, id=22, 167.62625pt x 145.54375pt>
-File: ./Graphs/Figure1.5.png Graphic file (type png)
-<use ./Graphs/Figure1.5.png>
-Package pdftex.def Info: ./Graphs/Figure1.5.png  used on input line 143.
-(pdftex.def)             Requested size: 75.4311pt x 65.49406pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-
- <./Graphs/Figure1.1.png>]
-Underfull \hbox (badness 1127) in paragraph at lines 149--150
+Underfull \hbox (badness 1127) in paragraph at lines 142--143
 \T1/pplx/m/n/10 (+20) let-ter 'X'. Ap-pend the rows to form the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--150
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
-<./Graphs/Figure1.2.png, id=34, 345.29pt x 608.2725pt>
+<./Graphs/Figure1.2.png, id=22, 428.60126pt x 576.1525pt>
 File: ./Graphs/Figure1.2.png Graphic file (type png)
 <use ./Graphs/Figure1.2.png>
-Package pdftex.def Info: ./Graphs/Figure1.2.png  used on input line 153.
-(pdftex.def)             Requested size: 155.37904pt x 273.7201pt.
-<./Graphs/Figure1.4.png, id=35, 245.91875pt x 121.45375pt>
+Package pdftex.def Info: ./Graphs/Figure1.2.png  used on input line 146.
+(pdftex.def)             Requested size: 171.43745pt x 230.45691pt.
+[1{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./Graphs/Figure1.1.png>]
+<./Graphs/Figure1.4.png, id=34, 245.91875pt x 121.45375pt>
 File: ./Graphs/Figure1.4.png Graphic file (type png)
 <use ./Graphs/Figure1.4.png>
-Package pdftex.def Info: ./Graphs/Figure1.4.png  used on input line 163.
+Package pdftex.def Info: ./Graphs/Figure1.4.png  used on input line 156.
 (pdftex.def)             Requested size: 184.4386pt x 91.09007pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-<./Graphs/Figure1.6.png, id=36, 587.19376pt x 232.87pt>
+<./Graphs/Figure1.6.png, id=35, 587.19376pt x 232.87pt>
 File: ./Graphs/Figure1.6.png Graphic file (type png)
 <use ./Graphs/Figure1.6.png>
-Package pdftex.def Info: ./Graphs/Figure1.6.png  used on input line 172.
+Package pdftex.def Info: ./Graphs/Figure1.6.png  used on input line 165.
 (pdftex.def)             Requested size: 205.52089pt x 81.5057pt.
 
-Overfull \hbox (0.51859pt too wide) in paragraph at lines 172--173
+Overfull \hbox (0.51859pt too wide) in paragraph at lines 165--166
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
+Underfull \hbox (badness 10000) in paragraph at lines 170--171
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
 
  []
 
-<./Graphs/Figure1.8.png, id=37, 407.5225pt x 666.49pt>
+<./Graphs/Figure1.8.png, id=36, 407.5225pt x 666.49pt>
 File: ./Graphs/Figure1.8.png Graphic file (type png)
 <use ./Graphs/Figure1.8.png>
-Package pdftex.def Info: ./Graphs/Figure1.8.png  used on input line 186.
+Package pdftex.def Info: ./Graphs/Figure1.8.png  used on input line 179.
 (pdftex.def)             Requested size: 158.93314pt x 259.93005pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2 <./Graphs/Figure1.5.png> <./Graphs/Figure1.2.png> <./Graphs/Figure1.4.png> 
-<./Graphs/Figure1.6.png>]
-<./Graphs/Figure1.9.png, id=51, 243.91125pt x 132.495pt>
+<./Graphs/Figure1.9.png, id=37, 243.91125pt x 132.495pt>
 File: ./Graphs/Figure1.9.png Graphic file (type png)
 <use ./Graphs/Figure1.9.png>
-Package pdftex.def Info: ./Graphs/Figure1.9.png  used on input line 194.
+Package pdftex.def Info: ./Graphs/Figure1.9.png  used on input line 187.
 (pdftex.def)             Requested size: 182.93298pt x 99.37099pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--200
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
 
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 201--202
+Underfull \hbox (badness 2368) in paragraph at lines 194--195
 \T1/pplx/m/n/10 (+20) from the key 'NY-ITV'. Then, write the
  []
 
 
-Underfull \hbox (badness 2005) in paragraph at lines 201--202
+Underfull \hbox (badness 2005) in paragraph at lines 194--195
 \T1/pplx/m/n/10 (+20) si-tion-Ma-trix to record the re-ar-range-ment
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
 
+[2 <./Graphs/Figure1.2.png> <./Graphs/Figure1.4.png> <./Graphs/Figure1.6.png> <
+./Graphs/Figure1.8.png> <./Graphs/Figure1.9.png>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 209.
+put line 202.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplx/m/sc/8'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
-24.
+17.
+
 (/usr/local/texlive/2020/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
@@ -790,89 +770,102 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<./Graphs/Figure2.0.png, id=52, 586.19pt x 276.03125pt>
+
+Overfull \hbox (6.23132pt too wide) in paragraph at lines 243--244
+[] $\OML/zplm/m/it/8 assign RowMatrix\OT1/zplm/m/n/8 [\OML/zplm/m/it/8 j\OT1/zp
+lm/m/n/8 ][\OML/zplm/m/it/8 keyPosition\OT1/zplm/m/n/8 [\OML/zplm/m/it/8 i\OT1/
+zplm/m/n/8 ]] \OML/zplm/m/it/8 from$ 
+ []
+
+<./Graphs/Figure2.0.png, id=53, 586.19pt x 276.03125pt>
 File: ./Graphs/Figure2.0.png Graphic file (type png)
 <use ./Graphs/Figure2.0.png>
-Package pdftex.def Info: ./Graphs/Figure2.0.png  used on input line 276.
+Package pdftex.def Info: ./Graphs/Figure2.0.png  used on input line 269.
 (pdftex.def)             Requested size: 205.16957pt x 96.61238pt.
- [3 <./Graphs/Figure1.8.png> <./Graphs/Figure1.9.png> <./Graphs/Figure2.0.png>]
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--284
 
  []
 
 
-LaTeX Warning: Empty `thebibliography' environment on input line 304.
+LaTeX Warning: Empty `thebibliography' environment on input line 297.
 
 
-Underfull \hbox (badness 1845) in paragraph at lines 298--304
+Underfull \hbox (badness 1845) in paragraph at lines 291--297
 \T1/pplx/m/n/8 (+20) [1]N. Hamza, ^^PRow trans-po-si-tion ci-phers - ppt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--304
+Underfull \hbox (badness 10000) in paragraph at lines 291--297
 \T1/pplx/m/n/8 (+20) down-load,^^Q Slide-Player. [On-line]. Avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--304
+Underfull \hbox (badness 10000) in paragraph at lines 291--297
 \T1/pplx/m/n/8 (+20) https://slideplayer.com/slide/13205094/. [Ac-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--304
+Underfull \hbox (badness 10000) in paragraph at lines 291--297
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--304
+Underfull \hbox (badness 10000) in paragraph at lines 291--297
 \T1/pplx/m/n/8 (+20) [2]^^PTransposition ci-pher,^^Q Wikipedia, 23-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--304
+Underfull \hbox (badness 10000) in paragraph at lines 291--297
 \T1/pplx/m/n/8 (+20) Feb-2022. [On-line]. Avail-able: https//
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--304
+Underfull \hbox (badness 10000) in paragraph at lines 291--297
 \T1/pplx/m/n/8 (+20) en.wikipedia.org/wiki/Transposition_cipher. [Ac-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--304
+Underfull \hbox (badness 10000) in paragraph at lines 291--297
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--304
+Underfull \hbox (badness 10000) in paragraph at lines 291--297
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 309.
-[4
+
+Underfull \vbox (badness 7133) has occurred while \output is active []
+
+ [3 <./Graphs/Figure2.0.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 302.
+ [4
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 309.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 302.
  (./INCS741GroupProject02.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 309.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 309.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 302.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 302.
 Package rerunfilecheck Info: File `INCS741GroupProject02.out' has not changed.
 (rerunfilecheck)             Checksum: 8104AE5FE7CB7419D68801CF79136153;212.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 309.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 302.
  ) 
 Here is how much of TeX's memory you used:
- 12061 strings out of 480608
- 186509 string characters out of 5903630
- 504590 words of memory out of 5000000
- 27501 multiletter control sequences out of 15000+600000
- 602401 words of font info for 227 fonts, out of 8000000 for 9000
+ 12058 strings out of 480608
+ 186386 string characters out of 5903630
+ 509590 words of memory out of 5000000
+ 27496 multiletter control sequences out of 15000+600000
+ 602624 words of font info for 230 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,12n,45p,884b,472s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,12n,45p,884b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
 live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texl
@@ -883,10 +876,10 @@ xmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2020/texm
 f-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2020/texmf-dist/
 fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/t
 ype1/urw/palatino/uplri8a.pfb>
-Output written on INCS741GroupProject02.pdf (4 pages, 431390 bytes).
+Output written on INCS741GroupProject02.pdf (4 pages, 425271 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
- 18 named destinations out of 1000 (max. 500000)
- 62025 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 102 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
+ 17 named destinations out of 1000 (max. 500000)
+ 62020 words of extra memory for PDF output out of 74296 (max. 10000000)
 
