@@ -41,14 +41,14 @@ public class RowTranspositionCipher {
             for (int j = 0; j < cols; ++ j) { 
                 while (k == message.length() && j < cols) {
                     RowTranspositionMatrix[i][j] = 'X';
-                    System.out.print(RowTranspositionMatrix[i][j]);
+                    // System.out.print(RowTranspositionMatrix[i][j]);
                     j++;
                 }
                 if (k == message.length()) break; 
                 RowTranspositionMatrix[i][j] = messageArray[k++];  
-                System.out.print(RowTranspositionMatrix[i][j] + " "); 
+                // System.out.print(RowTranspositionMatrix[i][j] + " "); 
             } 
-            System.out.println(); 
+            // System.out.println(); 
         } 
 
         /* Append the encrypted message line by line through matrix */
@@ -141,7 +141,6 @@ public class RowTranspositionCipher {
         System.out.println("Comparing M and D : " + enmessage.equals(decode) + "\n");
 
         System.out.println("Test 2 ======================================> ");
-        System.out.println("*******");
         System.out.println("C : [ " + demessage + " ]");    
         System.out.println("w : [ " + key + " ]");
         String d = rtcdecryption(key, demessage);
